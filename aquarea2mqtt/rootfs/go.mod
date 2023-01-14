@@ -1,4 +1,4 @@
-module github.com/rondoval/aquarea2mqtt
+module github.com/fbloemhof/hassio-addons/tree/main/aquarea2mqtt
 
 go 1.14
 

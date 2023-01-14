@@ -21,4 +21,4 @@ Panasonic Aquarea Service Cloud to MQTT gateway
 [armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
 [i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-experimental-yellow.svg
-[version]: https://img.shields.io/badge/version-v2022.3.25.1-blue.svg
+[version]: https://img.shields.io/badge/version-v2023.1.14.7-blue.svg
