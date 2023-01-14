@@ -57,10 +57,8 @@ type mqttBinarySensor struct {
 }
 
 func SplitCamelCaseRegex(s string) []string {
-    var words []string
-    re := regexp.MustCompile(`([A-Z][a-z]+)`)
-    words = re.FindAllString(s, -1)
-    return words
+    re := regexp.MustCompile("[a-z]+|[A-Z][a-z]*|[0-9]+")
+    return strings.Fields(re.ReplaceAllString(s, "$0 "))
 }
 
 func (aq *aquarea) encodeSwitches(topics map[string]string, user aquareaEndUserJSON) map[string]string {
