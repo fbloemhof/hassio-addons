@@ -5,6 +5,7 @@ import (
 	"net/http"
 	"net/url"
 	"strings"
+	"log"
 )
 
 // Posts data to Aquarea web service
