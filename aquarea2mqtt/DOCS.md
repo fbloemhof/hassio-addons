@@ -38,7 +38,7 @@ The password to connect to the MQTT server.
 
 ### Option: `MqttClientID`
 
-The topic to use.
+The MQTT client ID to use.
 
 ### Option: `MqttKeepalive`
 

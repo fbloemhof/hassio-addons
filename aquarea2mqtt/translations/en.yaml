@@ -1,4 +1,37 @@
 configuration:
-  message:
-    name: Message
-    description: The message that will be printed to the log when starting this example add-on.
+  AquareaServiceCloudURL: 
+    name: AquareaServiceCloudURL
+    description: The URL to the Aquarea Service Cloud
+  AquareaServiceCloudLogin:
+    name: AquareaServiceCloudLogin
+    description: Aquarea Service Cloud Username
+  AquareaServiceCloudPassword:
+    name: AquareaServiceCloudPassword
+    description: Aquarea Service Cloud Password
+  AquareaTimeout:
+    name: AquareaTimeout
+    description: Timeout connecting to the Aquarea Service Cloud
+  MqttServer:
+    name: MqttServer
+    description: The IP address or DNS name of the MQTT server
+  MqttPort: 
+    name: MqttPort
+    description: The port of the MQTT server
+  MqttLogin:
+    name: MqttLogin
+    description: The username for the MQTT server
+  MqttPass:
+    name: MqttPass
+    description: The password for the MQTT server
+  MqttClientID: 
+    name: MqttClientID
+    description: The unique client ID for the MQTT server
+  MqttKeepalive:
+    name: MqttKeepalive
+    description: The keepalive interval to the MQTT server
+  PoolInterval:
+    name: PoolInterval
+    description: The interval for polling the Aquarea Service Cloud
+  LogSecOffset:
+    name: LogSecOffset
+    description: Not sure what this does.
