@@ -55,6 +55,19 @@ type mqttBinarySensor struct {
 	} `json:"device"`
 }
 
+func SplitCamelCase(s string) []string {
+    var words []string
+    var last int
+    for i, c := range s {
+        if c >= 'A' && c <= 'Z' {
+            words = append(words, s[last:i])
+            last = i
+        }
+    }
+    words = append(words, s[last:])
+    return words
+}
+
 func (aq *aquarea) encodeSwitches(topics map[string]string, user aquareaEndUserJSON) map[string]string {
 	config := make(map[string]string)
 
@@ -139,7 +152,7 @@ func (aq *aquarea) encodeSensors(topics map[string]string, user aquareaEndUserJS
 
 func encodeBinarySensor(name, id, stateTopic string) (string, []byte, error) {
 	var s mqttBinarySensor
-	s.Name = name
+	s.Name = SplitCamelCase(name)
 	s.AvailabilityTopic = "aquarea/status"
 	s.StateTopic = stateTopic
 	s.PayloadOn = "On"
@@ -160,7 +173,7 @@ func encodeBinarySensor(name, id, stateTopic string) (string, []byte, error) {
 
 func encodeSensor(name, id, stateTopic, unit string) (string, []byte, error) {
 	var s mqttSensor
-	s.Name = name
+	s.Name = SplitCamelCase(name)
 	s.AvailabilityTopic = "aquarea/status"
 	s.StateTopic = stateTopic
 	s.UnitOfMeasurement = unit
@@ -180,7 +193,7 @@ func encodeSensor(name, id, stateTopic, unit string) (string, []byte, error) {
 
 func encodeSwitch(name, id, stateTopic string, values []string) (string, []byte, error) {
 	var b mqttSwitch
-	b.Name = name
+	b.Name = SplitCamelCase(name)
 	b.AvailabilityTopic = "aquarea/status"
 	b.CommandTopic = stateTopic + "/set"
 	b.StateTopic = stateTopic

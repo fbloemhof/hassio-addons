@@ -1,4 +1,4 @@
-# Home Assistant Add-on: Aquarea2mqtt
+# Home Assistant Add-on: Aquarea2NQTT
 
 Panasonic Aquarea Service Cloud to MQTT gateway
 
@@ -10,10 +10,14 @@ Panasonic Aquarea Service Cloud to MQTT gateway
 ![Supports armv7 Architecture][armv7-shield]
 ![Supports i386 Architecture][i386-shield]
 
-# Important information
+## Important information
 
-- When you set the interval > 60s you have the chance that Panasonic will block you temporarily.
+- When you set the interval < 60s you have the chance that Panasonic will block you temporarily.
 - All sensors and switches are automatically discovered by Home Assistant MQTT
+
+## Credits
+
+This addon is based on <https://github.com/rondoval/aquarea2mqtt> which is based on <https://github.com/lsochanowski/Aquarea2mqtt>. Many thanks to both.
 
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
@@ -21,4 +25,4 @@ Panasonic Aquarea Service Cloud to MQTT gateway
 [armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
 [i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-experimental-yellow.svg
-[version]: https://img.shields.io/badge/version-v2023.1.14.8-blue.svg
+[version]: https://img.shields.io/badge/version-v2023.1.14.9-blue.svg
