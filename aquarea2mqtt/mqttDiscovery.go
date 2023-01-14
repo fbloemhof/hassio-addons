@@ -191,7 +191,7 @@ func encodeSensor(name, id, stateTopic, unit string) (string, []byte, error) {
 func encodeSwitch(name, id, stateTopic string, values []string) (string, []byte, error) {
 	var b mqttSwitch
     var displayName = SplitCamelCaseRegex(name)
-	s.Name = strings.Join(displayName, " ")
+	b.Name = strings.Join(displayName, " ")
 	b.AvailabilityTopic = "aquarea/status"
 	b.CommandTopic = stateTopic + "/set"
 	b.StateTopic = stateTopic
