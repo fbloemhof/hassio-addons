@@ -1,0 +1,39 @@
+---
+name: Aquarea2mqtt
+description: Panasonic Aquarea Service Cloud to MQTT gateway
+url: "https://github.com/fbloemhof/hassio-addons/aquarea2mqtt"
+version: 2023.1.14.7
+slug: aquarea2mqtt
+init: false
+arch:
+- aarch64
+- amd64
+- armhf
+- armv7
+- i386
+options:
+  AquareaServiceCloudURL: https://aquarea-service.panasonic.com/
+  AquareaServiceCloudLogin:
+  AquareaServiceCloudPassword:
+  AquareaTimeout: 30s
+  MqttServer:
+  MqttPort: 1883
+  MqttLogin:
+  MqttPass:
+  MqttClientID: aquarea-test-pub
+  MqttKeepalive: 60s
+  PoolInterval: 60s
+  LogSecOffset: '500'
+schema:
+  AquareaServiceCloudURL: str
+  AquareaServiceCloudLogin: str
+  AquareaServiceCloudPassword: password
+  AquareaTimeout: str
+  MqttServer: str
+  MqttPort: int
+  MqttLogin: str
+  MqttPass: password
+  MqttClientID: str
+  MqttKeepalive: str
+  PoolInterval: str
+  LogSecOffset: int
