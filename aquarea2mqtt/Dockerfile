@@ -4,8 +4,8 @@ ENV CGO_ENABLED=0
 
 WORKDIR /go/src/github.com/fbloemhof/hassio-addons/tree/main/aquarea2mqtt/rootfs
 ADD . /go/src/github.com/fbloemhof/hassio-addons/tree/main/aquarea2mqtt/rootfs
-RUN rootfs/go get github.com/fbloemhof/hassio-addons/tree/main/aquarea2mqtt/rootfs
-RUN rootfs/go build -a -tags netgo -ldflags '-w -extldflags "-static"' -o /go/bin/aquarea2mqtt
+RUN /rootfs/go get github.com/fbloemhof/hassio-addons/tree/main/aquarea2mqtt/rootfs
+RUN /rootfs/go build -a -tags netgo -ldflags '-w -extldflags "-static"' -o /go/bin/aquarea2mqtt
 
 FROM alpine
 COPY --from=builder /go/bin/aquarea2mqtt /aquarea/aquarea2mqtt
