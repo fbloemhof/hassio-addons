@@ -1,4 +1,4 @@
-# Home Assistant Add-on: Aquarea2NQTT
+# Home Assistant Add-on: Aquarea2MQTT
 
 Panasonic Aquarea Service Cloud to MQTT gateway
 

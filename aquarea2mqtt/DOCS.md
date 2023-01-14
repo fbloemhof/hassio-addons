@@ -1,4 +1,6 @@
-# Home Assistant Add-on: Example add-on
+# Home Assistant Add-on: Aquarea2MQTT
+
+Panasonic Aquarea Service Cloud to MQTT gateway
 
 ## Configuration
 
