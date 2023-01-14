@@ -9,6 +9,7 @@ import (
 
 // Posts data to Aquarea web service
 func (aq *aquarea) httpPost(url string, urlValues url.Values) ([]byte, error) {
+	log.Println("Sending POST to Aquarea Service Cloud")
 	req, err := http.NewRequest(http.MethodPost, url, strings.NewReader(urlValues.Encode()))
 	if err != nil {
 		return nil, err
@@ -31,6 +32,7 @@ func (aq *aquarea) httpPost(url string, urlValues url.Values) ([]byte, error) {
 }
 
 func (aq *aquarea) httpGet(url string) ([]byte, error) {
+	log.Println("Sending GET to Aquarea Service Cloud")
 	req, err := http.NewRequest(http.MethodGet, url, nil)
 	if err != nil {
 		return nil, err
