@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"strings"
+	"regexp"
 )
 
 type mqttSwitch struct {
@@ -55,16 +56,10 @@ type mqttBinarySensor struct {
 	} `json:"device"`
 }
 
-func SplitCamelCase(s string) []string {
+func SplitCamelCaseRegex(s string) []string {
     var words []string
-    var last int
-    for i, c := range s {
-        if c >= 'A' && c <= 'Z' {
-            words = append(words, s[last:i])
-            last = i
-        }
-    }
-    words = append(words, s[last:])
+    re := regexp.MustCompile(`([A-Z][a-z]+)`)
+    words = re.FindAllString(s, -1)
     return words
 }
 
@@ -152,7 +147,8 @@ func (aq *aquarea) encodeSensors(topics map[string]string, user aquareaEndUserJS
 
 func encodeBinarySensor(name, id, stateTopic string) (string, []byte, error) {
 	var s mqttBinarySensor
-	s.Name = SplitCamelCase(name)
+    var displayName = SplitCamelCaseRegex(name)
+	s.Name = strings.Join(displayName, " ")
 	s.AvailabilityTopic = "aquarea/status"
 	s.StateTopic = stateTopic
 	s.PayloadOn = "On"
@@ -173,7 +169,8 @@ func encodeBinarySensor(name, id, stateTopic string) (string, []byte, error) {
 
 func encodeSensor(name, id, stateTopic, unit string) (string, []byte, error) {
 	var s mqttSensor
-	s.Name = SplitCamelCase(name)
+    var displayName = SplitCamelCaseRegex(name)
+	s.Name = strings.Join(displayName, " ")
 	s.AvailabilityTopic = "aquarea/status"
 	s.StateTopic = stateTopic
 	s.UnitOfMeasurement = unit
@@ -193,7 +190,8 @@ func encodeSensor(name, id, stateTopic, unit string) (string, []byte, error) {
 
 func encodeSwitch(name, id, stateTopic string, values []string) (string, []byte, error) {
 	var b mqttSwitch
-	b.Name = SplitCamelCase(name)
+    var displayName = SplitCamelCaseRegex(name)
+	s.Name = strings.Join(displayName, " ")
 	b.AvailabilityTopic = "aquarea/status"
 	b.CommandTopic = stateTopic + "/set"
 	b.StateTopic = stateTopic
