@@ -2,14 +2,14 @@ FROM golang as builder
 
 ENV CGO_ENABLED=0
 
-WORKDIR /go/src/github.com/fbloemhof/hassio-addons/tree/main/aquarea2mqtt/rootfs
-ADD . /go/src/github.com/fbloemhof/hassio-addons/tree/main/aquarea2mqtt/rootfs
-RUN go get github.com/fbloemhof/hassio-addons/tree/main/aquarea2mqtt/rootfs
+WORKDIR /go/src/github.com/fbloemhof/hassio-addons/tree/main/aquarea2mqtt
+ADD . /go/src/github.com/fbloemhof/hassio-addons/tree/main/aquarea2mqtt
+RUN go get github.com/fbloemhof/hassio-addons/tree/main/aquarea2mqtt
 RUN go build -a -tags netgo -ldflags '-w -extldflags "-static"' -o /go/bin/aquarea2mqtt
 
 FROM alpine
 COPY --from=builder /go/bin/aquarea2mqtt /aquarea/aquarea2mqtt
-COPY --from=builder /go/src/github.com/fbloemhof/hassio-addons/tree/main/aquarea2mqtt/rootfs/translation.json /aquarea/translation.json
+COPY --from=builder /go/src/github.com/fbloemhof/hassio-addons/tree/main/aquarea2mqtt/translation.json /aquarea/translation.json
 WORKDIR /aquarea
 ENTRYPOINT ./aquarea2mqtt
 
