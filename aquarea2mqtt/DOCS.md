@@ -1,10 +1,48 @@
 # Home Assistant Add-on: Example add-on
 
-## How to use
+## Configuration
 
-This add-on really does nothing. It is just an example.
+### Option: `AquareaServiceCloudURL`
 
-When started it will print the configured message or "Hello world" in the log.
+The URL to the Aquarea Service Cloud. You can leave this default.
 
-It will also print "All done!" in `/share/example_addon_output.txt` to show
-simple example of the usage of `map` in addon config.
+### Option: `AquareaServiceCloudLogin`
+
+The username/e-mail address you use to login to the Aquarea Service Cloud.
+
+### Option: `AquareaServiceCloudPassword`
+
+The password used to login to the Aquarea Service Cloud.
+
+### Option: `AquareaTimeout`
+
+The timeout to the Aquarea Service Cloud.
+
+### Option: `MqttServer`
+
+The address to the MQTT server.
+
+### Option: `MqttPort`
+
+The port number of the MQTT server.
+
+### Option: `MqttLogin`
+
+The username to connect to the MQTT server.
+
+### Option: `MqttPass`
+
+The password to connect to the MQTT server.
+
+### Option: `MqttClientID`
+
+The topic to use.
+
+### Option: `MqttKeepalive`
+
+Define how long between keepalive messages.
+### Option: `PoolInterval`
+
+Define the interval of polling the Aquarea Service Cloud. Warning, when you configure this very low you might get banned by Panasonic.
+
+### Option: `LogSecOffset`
