@@ -15,9 +15,25 @@ Panasonic Aquarea Service Cloud to MQTT gateway
 - When you set the interval < 60s you have the chance that Panasonic will block you temporarily.
 - All sensors and switches are automatically discovered by Home Assistant MQTT
 
+## Installation
+
+Note: This addon requires an mqtt broker. Make sure you have this already running.
+
+1. [Add my addon repository](https://github.com/fbloemhof/hassio-addons) to your Home Assistant instance
+2. Install the addon
+3. Configure your credentials to the Aquarea Service Cloud and save the config
+4. Start the addon
+5. Check the logfile to see if the addon is running fine.
+
+If all went well you can find the Aquarea device automatically discovered under the MQTT integrations
+
 ## Credits
 
 This addon is based on <https://github.com/rondoval/aquarea2mqtt> which is based on <https://github.com/lsochanowski/Aquarea2mqtt>. Many thanks to both.
+
+## Disclaimer
+
+I am not related to Panasonic and can not take any responsibility in issues you may cause with the Service Cloud or your Panasonic heatpump when using this addon.
 
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
