@@ -5,9 +5,6 @@ url: "https://github.com/fbloemhof/hassio-addons/tree/main/aquarea2mqtt"
 version: 2023.1.15.9
 slug: aquarea2mqtt
 init: false
-homeassistant_api: false
-hassio_api: false
-ingress: false
 auth_api: true
 services:
   - mqtt:need
