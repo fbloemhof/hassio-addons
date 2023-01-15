@@ -1,4 +1,4 @@
-# fbloemhof's Home Assistant add-on repository
+# Home Assistant add-on repository
 
 Here you can find my addons.
 
