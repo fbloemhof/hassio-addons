@@ -1,5 +1,5 @@
 configuration:
-  AquareaServiceCloudURL: 
+  AquareaServiceCloudURL:
     name: AquareaServiceCloudURL
     description: The URL to the Aquarea Service Cloud
   AquareaServiceCloudLogin:
@@ -11,19 +11,7 @@ configuration:
   AquareaTimeout:
     name: AquareaTimeout
     description: Timeout connecting to the Aquarea Service Cloud
-  MqttServer:
-    name: MqttServer
-    description: The IP address or DNS name of the MQTT server
-  MqttPort: 
-    name: MqttPort
-    description: The port of the MQTT server
-  MqttLogin:
-    name: MqttLogin
-    description: The username for the MQTT server
-  MqttPass:
-    name: MqttPass
-    description: The password for the MQTT server
-  MqttClientID: 
+  MqttClientID:
     name: MqttClientID
     description: The unique client ID for the MQTT server
   MqttKeepalive:
@@ -35,3 +23,15 @@ configuration:
   LogSecOffset:
     name: LogSecOffset
     description: Not sure what this does.
+  MqttServer:
+    name: MqttServer
+    description: (optional) The IP address or DNS name of the MQTT server
+  MqttPort:
+    name: MqttPort
+    description: (optional) The port of the MQTT server
+  MqttLogin:
+    name: MqttLogin
+    description: (optional) The username for the MQTT server
+  MqttPass:
+    name: MqttPass
+    description: (optional) The password for the MQTT server

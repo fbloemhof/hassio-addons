@@ -4,47 +4,4 @@ Panasonic Aquarea Service Cloud to MQTT gateway
 
 ## Configuration
 
-### Option: `AquareaServiceCloudURL`
-
-The URL to the Aquarea Service Cloud. You can leave this default.
-
-### Option: `AquareaServiceCloudLogin`
-
-The username/e-mail address you use to login to the Aquarea Service Cloud.
-
-### Option: `AquareaServiceCloudPassword`
-
-The password used to login to the Aquarea Service Cloud.
-
-### Option: `AquareaTimeout`
-
-The timeout to the Aquarea Service Cloud.
-
-### Option: `MqttServer`
-
-The address to the MQTT server.
-
-### Option: `MqttPort`
-
-The port number of the MQTT server.
-
-### Option: `MqttLogin`
-
-The username to connect to the MQTT server.
-
-### Option: `MqttPass`
-
-The password to connect to the MQTT server.
-
-### Option: `MqttClientID`
-
-The MQTT client ID to use.
-
-### Option: `MqttKeepalive`
-
-Define how long between keepalive messages.
-### Option: `PoolInterval`
-
-Define the interval of polling the Aquarea Service Cloud. Warning, when you configure this very low you might get banned by Panasonic.
-
-### Option: `LogSecOffset`
+After installing this addon you need to configure you credentials to the Aquarea Service Cloud. If needed, you can also configure an MQTT server and credentials to it. Else the addon will use the MQTT broker configured in Home Assistant.
