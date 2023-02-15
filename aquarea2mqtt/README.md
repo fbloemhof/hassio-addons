@@ -10,6 +10,8 @@ Panasonic Aquarea Service Cloud to MQTT gateway
 ![Supports armv7 Architecture][armv7-shield]
 ![Supports i386 Architecture][i386-shield]
 
+**This addon is deprecated**
+
 ## Important information
 
 - When you set the interval < 60s you have the chance that Panasonic will block you temporarily.

@@ -2,10 +2,11 @@
 name: Aquarea2MQTT
 description: Panasonic Aquarea Service Cloud to MQTT gateway
 url: "https://github.com/fbloemhof/hassio-addons/tree/main/aquarea2mqtt"
-version: 2023.1.15.9
+version: 2023.2.15.1
 slug: aquarea2mqtt
 init: false
 auth_api: true
+stage: deprecated
 services:
   - mqtt:need
 discovery:
