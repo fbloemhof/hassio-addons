@@ -42,5 +42,5 @@ I am not related to Panasonic and can not take any responsibility in issues you 
 [armhf-shield]: https://img.shields.io/badge/armhf-yes-green.svg
 [armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
 [i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
-[project-stage-shield]: https://img.shields.io/badge/project%20stage-experimental-yellow.svg
-[version]: https://img.shields.io/badge/version-v2023.1.15.9-blue.svg
+[project-stage-shield]: https://img.shields.io/badge/project%20stage-depracated-red.svg
+[version]: https://img.shields.io/badge/version-v2023.2.15.1-blue.svg
